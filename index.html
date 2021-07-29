@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body class="bg-light" >
+    <!-- Just an image -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand " href="#">
+            <img src="logo.png" width="170" height="60" alt="">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link " href="#">Join a Race <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Learderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="button">Login</button></a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+  <section class="container ">
+      <section class="row justify-content-center">
+          <section class="col-12 col-sm-6 col-md-5">
+            <form  class=" reset " onclick="return validation()">
+                <h1 id="heading">Password Reset</h1>
+                <div id="main">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">New Password</label>
+                        <input type="text" class="form-control" id="pas" name="text1" >
+                        <span class="text-danger" id="firstpas"> </span>                  
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Re-Enter New Password</label>
+                        <input type="password" class="form-control" id="repas" name="text2">
+                        <span class="text-danger" id="secondpas"> </span> 
+                        <span class="text-danger" id="match"> </span> 
+                         
+                      </div>
+                </div>
+              
+               
+                <button type="button" id="btns"  class="btn ">Reset Password</button>
+               
+                   
+              </form>
+          </section>
+      </section>
+  </section>
+
+
+   <footer class="footer ">
+  
+       <div class="container">
+           <div class="row">
+               <div class="">
+                <ul class="abc">
+                    <li class="item"><a href="#">About Us</a></li>
+                    <li class="item"><a href="#">Privacy Policy</a></li>
+                    <li class="item"><a href="#">Tutorials</a></li>
+                    <li class="item"><a href="#">Terms of Services</a></li>
+                    
+                </ul>
+               </div>
+           </div>
+       </div>
+        
+    
+   </footer>
+
+
+   <script>
+    function validation() {
+    var text1 = document.getElementById("pas");
+    var text2 = document.getElementById("repas");
+       
+    
+    if (text1.value == ""  ) {
+      document.getElementById('firstpas').innerHTML =""
+    
+    }
+    else if(text2.value == ""){
+     document.getElementById('secondpas').innerHTML =""
+     return false;
+    }
+    else if (text1.value!=text2.value) {
+     document.getElementById('match').innerHTML ="Password do not match"
+      return false;
+    }
+
+    else {
+     document.getElementById('heading').innerHTML ="Password Changed"  
+     document.getElementById('main').innerHTML ="Your password has been updated! Now get back in the driver seat, racers are waiting for you!"
+     document.getElementById('btns').innerHTML ="Join A Race"
+    }
+
+
+
+    }
+</script>
+      
+    
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
